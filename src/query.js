@@ -21,8 +21,6 @@ db.Motos.find({$or:[
     { "Gasolina": {$nin: ["98 octanos"]}}
 ]}).count()
 
-db.Motos.find({$or:[{ "Tipo": {$ne: "Custom"}}, { "Gasolina": {$nin: ["98 octanos"]}}]}).count()
-
 
 /*Muestra todos los documentos cuyo precio no es mas pequeño o igual que 600, y además su gasolina es de 98 octanos.*/
 db.Motos.find({$and:[
